@@ -1,0 +1,159 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "InspectDincerPluginResources",
+      "Effect": "Allow",
+      "Action": [
+        "lambda:ListFunctions",
+        "cloudformation:ListStacks"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "ManageDincerPluginLambda",
+      "Effect": "Allow",
+      "Action": [
+        "lambda:CreateFunction",
+        "lambda:DeleteFunction",
+        "lambda:GetFunction",
+        "lambda:GetFunctionConfiguration",
+        "lambda:UpdateFunctionCode",
+        "lambda:UpdateFunctionConfiguration",
+        "lambda:AddPermission",
+        "lambda:RemovePermission",
+        "lambda:TagResource",
+        "lambda:UntagResource"
+      ],
+      "Resource": "arn:aws:lambda:<AWS_REGION>:<AWS_ACCOUNT_ID>:function:<RESOURCE_PREFIX>-*"
+    },
+    {
+      "Sid": "ManageDincerGptLambdaRole",
+      "Effect": "Allow",
+      "Action": [
+        "iam:CreateRole",
+        "iam:DeleteRole",
+        "iam:GetRole",
+        "iam:PassRole",
+        "iam:PutRolePolicy",
+        "iam:DeleteRolePolicy",
+        "iam:TagRole",
+        "iam:UntagRole"
+      ],
+      "Resource": "arn:aws:iam::<AWS_ACCOUNT_ID>:role/<RESOURCE_PREFIX>-*"
+    },
+    {
+      "Sid": "ManageDincerGptLambdaLogs",
+      "Effect": "Allow",
+      "Action": [
+        "logs:CreateLogGroup",
+        "logs:DeleteLogGroup",
+        "logs:PutRetentionPolicy",
+        "logs:ListTagsForResource",
+        "logs:TagResource",
+        "logs:UntagResource"
+      ],
+      "Resource": "arn:aws:logs:<AWS_REGION>:<AWS_ACCOUNT_ID>:log-group:/aws/lambda/<RESOURCE_PREFIX>-*"
+    },
+    {
+      "Sid": "ManageDincerGptQueryLimitTable",
+      "Effect": "Allow",
+      "Action": [
+        "dynamodb:CreateTable",
+        "dynamodb:DeleteTable",
+        "dynamodb:DescribeTable",
+        "dynamodb:UpdateTable",
+        "dynamodb:UpdateTimeToLive",
+        "dynamodb:DescribeTimeToLive",
+        "dynamodb:TagResource",
+        "dynamodb:UntagResource"
+      ],
+      "Resource": "arn:aws:dynamodb:<AWS_REGION>:<AWS_ACCOUNT_ID>:table/<RESOURCE_PREFIX>-query-limits"
+    },
+    {
+      "Sid": "ManageDincerPluginApi",
+      "Effect": "Allow",
+      "Action": [
+        "apigateway:GET",
+        "apigateway:POST",
+        "apigateway:PUT",
+        "apigateway:PATCH",
+        "apigateway:DELETE",
+        "apigateway:TagResource",
+        "apigateway:UntagResource"
+      ],
+      "Resource": [
+        "arn:aws:apigateway:<AWS_REGION>::/apis",
+        "arn:aws:apigateway:<AWS_REGION>::/apis/*",
+        "arn:aws:apigateway:<AWS_REGION>::/tags/*"
+      ]
+    },
+    {
+      "Sid": "CreateDincerGptCognitoUserPool",
+      "Effect": "Allow",
+      "Action": "cognito-idp:CreateUserPool",
+      "Resource": "*",
+      "Condition": {
+        "StringEquals": {
+          "aws:RequestedRegion": "<AWS_REGION>"
+        }
+      }
+    },
+    {
+      "Sid": "ManageDincerGptCognitoResources",
+      "Effect": "Allow",
+      "Action": [
+        "cognito-idp:DeleteUserPool",
+        "cognito-idp:UpdateUserPool",
+        "cognito-idp:DescribeUserPool",
+        "cognito-idp:CreateUserPoolClient",
+        "cognito-idp:DeleteUserPoolClient",
+        "cognito-idp:UpdateUserPoolClient",
+        "cognito-idp:DescribeUserPoolClient",
+        "cognito-idp:CreateUserPoolDomain",
+        "cognito-idp:DeleteUserPoolDomain",
+        "cognito-idp:DescribeUserPoolDomain",
+        "cognito-idp:CreateResourceServer",
+        "cognito-idp:DeleteResourceServer",
+        "cognito-idp:UpdateResourceServer",
+        "cognito-idp:DescribeResourceServer",
+        "cognito-idp:TagResource",
+        "cognito-idp:UntagResource"
+      ],
+      "Resource": "arn:aws:cognito-idp:<AWS_REGION>:<AWS_ACCOUNT_ID>:userpool/*"
+    },
+    {
+      "Sid": "ManageDincerGptReviewerUser",
+      "Effect": "Allow",
+      "Action": [
+        "cognito-idp:AdminCreateUser",
+        "cognito-idp:AdminGetUser",
+        "cognito-idp:AdminSetUserPassword"
+      ],
+      "Resource": "arn:aws:cognito-idp:<AWS_REGION>:<AWS_ACCOUNT_ID>:userpool/<USER_POOL_ID>"
+    },
+    {
+      "Sid": "ManageDincerGptCloudFormationStacks",
+      "Effect": "Allow",
+      "Action": [
+        "cloudformation:CreateStack",
+        "cloudformation:UpdateStack",
+        "cloudformation:DeleteStack",
+        "cloudformation:CreateChangeSet",
+        "cloudformation:DeleteChangeSet",
+        "cloudformation:DescribeChangeSet",
+        "cloudformation:ExecuteChangeSet",
+        "cloudformation:ContinueUpdateRollback",
+        "cloudformation:DescribeStacks",
+        "cloudformation:DescribeStackEvents",
+        "cloudformation:DescribeStackResources",
+        "cloudformation:GetTemplate",
+        "cloudformation:GetTemplateSummary"
+      ],
+      "Resource": [
+        "arn:aws:cloudformation:<AWS_REGION>:<AWS_ACCOUNT_ID>:stack/<RESOURCE_PREFIX>*/*",
+        "arn:aws:cloudformation:<AWS_REGION>:<AWS_ACCOUNT_ID>:changeSet/<RESOURCE_PREFIX>*/*"
+      ]
+    }
+  ]
+}

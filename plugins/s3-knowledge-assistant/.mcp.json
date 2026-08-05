@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "dincer-data": {
+      "type": "http",
+      "url": "https://<MCP_HOST>/mcp"
+    }
+  }
+}

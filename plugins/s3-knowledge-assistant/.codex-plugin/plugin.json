@@ -1,0 +1,42 @@
+{
+  "name": "s3-knowledge-assistant",
+  "version": "0.1.0",
+  "description": "Dincer Logistics'in onaylı depo ve taşıma verilerinde salt okunur arama yapar.",
+  "author": {
+    "name": "Dincer Logistics",
+    "email": "info@dincerlojistik.com",
+    "url": "https://dincerlogistics.com/"
+  },
+  "homepage": "https://dincerlogistics.com/",
+  "repository": "https://github.com/dincertechnology/dincer-gpt-plugin",
+  "license": "MIT",
+  "keywords": [
+    "dincer",
+    "logistics",
+    "warehouse",
+    "transport"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "Dincer Logistics",
+    "shortDescription": "Onaylı depo ve taşıma verilerinde güvenli arama.",
+    "longDescription": "Dincer Logistics'in yetkili Excel veri kaynaklarında salt okunur arama yapar ve sonuçları kaynaklarıyla sunar.",
+    "developerName": "Dincer Logistics",
+    "category": "Productivity",
+    "capabilities": [
+      "Read"
+    ],
+    "websiteURL": "https://dincerlogistics.com/",
+    "privacyPolicyURL": "https://github.com/dincertechnology/dincer-gpt-plugin/blob/main/docs/privacy-policy.md",
+    "termsOfServiceURL": "https://github.com/dincertechnology/dincer-gpt-plugin/blob/main/docs/terms-of-use.md",
+    "defaultPrompt": [
+      "Yetkili veri kaynaklarını ve güncelliklerini göster.",
+      "Depo verilerinde İstanbul kayıtlarını bul.",
+      "Ankara çıkışlı taşıma fiyatlarını ara."
+    ],
+    "brandColor": "#E30613",
+    "composerIcon": "./assets/dincer-connector-icon.png",
+    "logo": "./assets/dincer-connector-icon.png"
+  }
+}

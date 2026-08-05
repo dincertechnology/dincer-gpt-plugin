@@ -1,0 +1,20 @@
+{
+  "name": "dincer-gpt-plugins",
+  "interface": {
+    "displayName": "Dincer Logistics"
+  },
+  "plugins": [
+    {
+      "name": "s3-knowledge-assistant",
+      "source": {
+        "source": "local",
+        "path": "./plugins/s3-knowledge-assistant"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}
