@@ -15,16 +15,11 @@
 
 ## Olumlu testler
 
-1. "Yetkili veri kaynaklarını ve güncelliklerini göster."
-   - `sources_status` çağrılır; iki kaynağın boyutu ve son değişiklik zamanı döner.
-2. "Depo verilerinde İstanbul kayıtlarını bul."
-   - `query_data` çağrılır; `source=depo` kapsamındaki eşleşmeler kaynak bilgisiyle döner.
-3. "Ankara çıkışlı taşıma fiyatlarını ara."
-   - `query_data` çağrılır; `source=tasima` kapsamındaki eşleşmeler döner.
-4. "Her iki kaynakta İzmir geçen kayıtları bul."
-   - `query_data` çağrılır; `source=all` kullanılır ve sonuç sayısı sınırlandırılır.
-5. "Bu sonuçların hangi kaynaktan geldiğini göster."
-   - Araç sonucundaki kaynak alanları gösterilir; eksik bilgi tahmin edilmez.
+1. Geçerli bir fiyat sorgusu doğru sonuç döndürür.
+2. Birden fazla seçenek kurumsal biçimde karşılaştırılır.
+3. Desteklenmeyen bir seçenek teknik kaynak ayrıntısı açıklanmadan yanıtlanır.
+4. Lokasyon bazlı şart sorgusu yalnızca ilgili sonuçları döndürür.
+5. Kapsam dışı bir hizmet için açık ve kısa bilgilendirme yapılır.
 
 ## Olumsuz testler
 

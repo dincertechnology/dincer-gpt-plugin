@@ -78,9 +78,9 @@ gereklidir. Nihai yayın OpenAI inceleme onayına bağlıdır.
 
 ## Örnekler
 
-- "Yetkili veri kaynaklarını ve güncelliklerini göster."
-- "Depo verilerinde İstanbul kayıtlarını bul."
-- "Ankara çıkışlı taşıma fiyatlarını ara."
+- "Güncel hizmet fiyatını paylaş."
+- "Belirttiğim lokasyon için teklif şartlarını özetle."
+- "Uygun seçenekleri karşılaştır."
 
 ## Gizlilik ve destek
 
