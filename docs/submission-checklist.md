@@ -15,16 +15,16 @@
 
 ## Olumlu testler
 
-1. "Yetkili veri kaynaklarını ve güncelliklerini göster."
-   - `sources_status` çağrılır; iki kaynağın boyutu ve son değişiklik zamanı döner.
-2. "Depo verilerinde İstanbul kayıtlarını bul."
-   - `query_data` çağrılır; `source=depo` kapsamındaki eşleşmeler kaynak bilgisiyle döner.
-3. "Ankara çıkışlı taşıma fiyatlarını ara."
-   - `query_data` çağrılır; `source=tasima` kapsamındaki eşleşmeler döner.
-4. "Her iki kaynakta İzmir geçen kayıtları bul."
-   - `query_data` çağrılır; `source=all` kullanılır ve sonuç sayısı sınırlandırılır.
-5. "Bu sonuçların hangi kaynaktan geldiğini göster."
-   - Araç sonucundaki kaynak alanları gösterilir; eksik bilgi tahmin edilmez.
+1. "Iğdır için kamyon fiyatı nedir?"
+   - Gebze ve İzmir çıkışlı kamyon fiyatları tam TL olarak döner.
+2. "Gebze çıkışlı Adana kamyon, kırkayak ve tır fiyatları nedir?"
+   - Desteklenen üç araç tipi için kurumsal ve doğrudan yanıt döner.
+3. "Adana kamyonet fiyatı nedir?"
+   - Kaynak yapısına değinmeden fiyatlandırmanın kamyon, kırkayak ve tır için sunulduğu belirtilir.
+4. "Tuzla deposunun fiyatlarını ve teklif şartlarını özetle."
+   - Yalnızca Tuzla için fiyatlar ve ticari şartlar özetlenir.
+5. "Parsiyel taşıma fiyatı nedir?"
+   - Mevcut fiyatlandırmanın yalnızca FTL/komple kapsamda olduğu belirtilir.
 
 ## Olumsuz testler
 

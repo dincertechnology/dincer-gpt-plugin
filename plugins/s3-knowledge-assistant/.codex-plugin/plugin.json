@@ -1,7 +1,7 @@
 {
   "name": "s3-knowledge-assistant",
-  "version": "0.1.0",
-  "description": "Dincer Logistics'in onaylı depo ve taşıma verilerinde salt okunur arama yapar.",
+  "version": "0.1.0+codex.20260820005725",
+  "description": "Dincer Logistics'in onayl\u0131 depo ve ta\u015f\u0131ma verilerinde salt okunur arama yapar.",
   "author": {
     "name": "Dincer Logistics",
     "email": "info@dincerlojistik.com",
@@ -20,8 +20,8 @@
   "mcpServers": "./.mcp.json",
   "interface": {
     "displayName": "Dincer Logistics",
-    "shortDescription": "Onaylı depo ve taşıma verilerinde güvenli arama.",
-    "longDescription": "Dincer Logistics'in yetkili Excel veri kaynaklarında salt okunur arama yapar ve sonuçları kaynaklarıyla sunar.",
+    "shortDescription": "Onayl\u0131 depo ve ta\u015f\u0131ma verilerinde g\u00fcvenli arama.",
+    "longDescription": "Dincer Logistics'in yetkili depolama ve FTL/komple ta\u015f\u0131ma verilerinde salt okunur arama yapar; fiyatlar\u0131 ve ticari \u015fartlar\u0131 kurumsal bir dille sunar.",
     "developerName": "Dincer Logistics",
     "category": "Productivity",
     "capabilities": [
@@ -31,9 +31,9 @@
     "privacyPolicyURL": "https://github.com/dincertechnology/dincer-gpt-plugin/blob/main/docs/privacy-policy.md",
     "termsOfServiceURL": "https://github.com/dincertechnology/dincer-gpt-plugin/blob/main/docs/terms-of-use.md",
     "defaultPrompt": [
-      "Yetkili veri kaynaklarını ve güncelliklerini göster.",
-      "Depo verilerinde İstanbul kayıtlarını bul.",
-      "Ankara çıkışlı taşıma fiyatlarını ara."
+      "Gebze \u00e7\u0131k\u0131\u015fl\u0131 Adana kamyon, k\u0131rkayak ve t\u0131r fiyatlar\u0131n\u0131 payla\u015f.",
+      "Tuzla deposunun fiyatlar\u0131n\u0131 ve teklif \u015fartlar\u0131n\u0131 \u00f6zetle.",
+      "I\u011fd\u0131r i\u00e7in kamyon fiyat\u0131n\u0131 Gebze ve \u0130zmir \u00e7\u0131k\u0131\u015fl\u0131 olarak payla\u015f."
     ],
     "brandColor": "#E30613",
     "composerIcon": "./assets/dincer-connector-icon.png",

@@ -78,9 +78,9 @@ gereklidir. Nihai yayın OpenAI inceleme onayına bağlıdır.
 
 ## Örnekler
 
-- "Yetkili veri kaynaklarını ve güncelliklerini göster."
-- "Depo verilerinde İstanbul kayıtlarını bul."
-- "Ankara çıkışlı taşıma fiyatlarını ara."
+- "Tuzla deposunun fiyatlarını ve teklif şartlarını özetle."
+- "Iğdır için kamyon fiyatını Gebze ve İzmir çıkışlı olarak paylaş."
+- "Gebze çıkışlı Adana kamyon, kırkayak ve tır fiyatlarını paylaş."
 
 ## Gizlilik ve destek
 
