@@ -3,6 +3,7 @@ from __future__ import annotations
 import base64
 import json
 import os
+import re
 from datetime import datetime, timedelta, timezone
 from typing import Literal, TypedDict
 
@@ -42,6 +43,15 @@ _s3_client = None
 _ddb_client = None
 _ssm_client = None
 _instructions_cache = None
+
+TRANSPORT_TERMS = {
+    "kamyon", "kırkayak", "kirkayak", "tır", "tir", "ftl", "komple",
+    "çıkış", "cikis", "çıkışlı", "cikisli", "varış", "varis",
+}
+STORAGE_TERMS = {
+    "depo", "depolama", "antrepo", "palet", "elleçleme", "ellecleme",
+    "tuzla", "dilovası", "dilovasi",
+}
 
 
 class SourceMetadata(TypedDict):
@@ -211,13 +221,18 @@ def query_data(
     source: Literal["all", "depo", "tasima"] = "all",
     max_results: int = 8,
 ) -> QueryDataResult:
-    """Search approved workbook rows and return ranked matches with source details."""
+    """Search approved data with automatic routing; return only after all searches finish."""
     question = question.strip()
     if not 2 <= len(question) <= 200:
         raise ValueError("Soru 2-200 karakter arasında olmalı.")
     if not 1 <= max_results <= 20:
         raise ValueError("max_results 1-20 arasında olmalı.")
 
+    terms = set(re.findall(r"\w+", question.casefold()))
+    if terms & TRANSPORT_TERMS:
+        source = "tasima"
+    elif terms & STORAGE_TERMS:
+        source = "depo"
     selected = list(SOURCES) if source == "all" else [source]
     matches = []
     truncated = False
