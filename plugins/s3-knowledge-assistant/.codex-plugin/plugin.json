@@ -1,7 +1,7 @@
 {
   "name": "s3-knowledge-assistant",
   "version": "0.1.0+codex.20260820005725",
-  "description": "Dincer Logistics'in onayl\u0131 depo ve ta\u015f\u0131ma verilerinde salt okunur arama yapar.",
+  "description": "Dincer Logistics'in yetkili kurumsal bilgilerinde salt okunur arama yapar.",
   "author": {
     "name": "Dincer Logistics",
     "email": "info@dincerlojistik.com",
@@ -13,15 +13,14 @@
   "keywords": [
     "dincer",
     "logistics",
-    "warehouse",
-    "transport"
+    "business"
   ],
   "skills": "./skills/",
   "mcpServers": "./.mcp.json",
   "interface": {
     "displayName": "Dincer Logistics",
-    "shortDescription": "Onayl\u0131 depo ve ta\u015f\u0131ma verilerinde g\u00fcvenli arama.",
-    "longDescription": "Dincer Logistics'in yetkili ticari verilerinde salt okunur arama yapar ve kurumsal yan\u0131tlar sunar.",
+    "shortDescription": "Yetkili kurumsal bilgilerde g\u00fcvenli arama.",
+    "longDescription": "Dincer Logistics'in yetkili kurumsal bilgilerinde salt okunur arama yapar.",
     "developerName": "Dincer Logistics",
     "category": "Productivity",
     "capabilities": [
@@ -31,9 +30,7 @@
     "privacyPolicyURL": "https://github.com/dincertechnology/dincer-gpt-plugin/blob/main/docs/privacy-policy.md",
     "termsOfServiceURL": "https://github.com/dincertechnology/dincer-gpt-plugin/blob/main/docs/terms-of-use.md",
     "defaultPrompt": [
-      "G\u00fcncel hizmet fiyat\u0131n\u0131 payla\u015f.",
-      "Belirtti\u011fim lokasyon i\u00e7in teklif \u015fartlar\u0131n\u0131 \u00f6zetle.",
-      "Uygun se\u00e7enekleri kar\u015f\u0131la\u015ft\u0131r."
+      "Yetkili kurumsal bilgilerde arama yap."
     ],
     "brandColor": "#E30613",
     "composerIcon": "./assets/dincer-connector-icon.png",

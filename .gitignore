@@ -20,3 +20,4 @@ __pycache__/
 .build-gpt/
 .deployment-template.yaml
 .packaged-template.yaml
+.deploy/
