@@ -5,10 +5,10 @@
   },
   "plugins": [
     {
-      "name": "s3-knowledge-assistant",
+      "name": "dincer-logistics",
       "source": {
         "source": "local",
-        "path": "./plugins/s3-knowledge-assistant"
+        "path": "./plugins/dincer-logistics"
       },
       "policy": {
         "installation": "AVAILABLE",
