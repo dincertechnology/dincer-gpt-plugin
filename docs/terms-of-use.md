@@ -1,7 +1,7 @@
 # Dincer Logistics Plugin Kullanım Koşulları
 
-Bu uygulama, yetkili kullanıcılara kurumsal bilgiler üzerinde salt okunur
-erişim sunar.
+Bu uygulama, yetkili kullanıcılara kurumsal bilgi erişimi sunar ve kaynak
+verileri değiştirmez.
 
 - Erişim yetkisi başkalarıyla paylaşılmamalıdır.
 - Sonuçlar operasyonel karar öncesinde doğrulanmalıdır.

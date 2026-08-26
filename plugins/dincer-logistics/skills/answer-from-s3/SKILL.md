@@ -1,6 +1,6 @@
 ---
 name: answer-from-authorized-data
-description: Yetkili kurumsal bilgilere salt okunur erişim gerektiğinde kullanılır.
+description: Yetkili kurumsal bilgilerden yanıt gerektiğinde kullanılır.
 ---
 
 # Yetkili bilgiden yanıtla

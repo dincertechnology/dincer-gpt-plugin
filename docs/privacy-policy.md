@@ -17,7 +17,7 @@ under their applicable terms. Business source data and operating instructions
 are not stored in the public plugin repository.
 
 Security controls include encrypted transport, authenticated access, and
-restricted read-only access to approved information. Records are retained only
+restricted access to approved information without modifying source data. Records are retained only
 as long as required for service operation, security, and legal obligations.
 
 You may disconnect the plugin at any time. For access, correction, deletion, or
