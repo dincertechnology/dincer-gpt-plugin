@@ -1,0 +1,50 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "dincer-logistics",
+  "version": "1.0.1",
+  "description": "Searches Dincer Logistics depot and transportation information.",
+  "author": { "name": "Dinçer Logistics" },
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Dincer Logistics",
+        "shortDescription": "Explore logistics services",
+        "longDescription": "Find Dincer Logistics depot locations, service information, and transportation price records from approved company data.",
+        "developerName": "Dinçer Logistics",
+        "category": "Productivity",
+        "defaultPrompt": [
+          "Gebze çıkışlı Bursa kamyon fiyatı nedir?",
+          "Kocaeli'deki Dincer Logistics depolarını göster.",
+          "Tarsus ilçesindeki depo bilgilerini bul."
+        ],
+        "websiteURL": "https://dincerlogistics.com/",
+        "supportURL": "https://dincerlogistics.com/iletisim",
+        "privacyPolicyURL": "https://github.com/dincertechnology/dincer-gpt-plugin/blob/main/docs/privacy-policy.md",
+        "termsOfServiceURL": "https://github.com/dincertechnology/dincer-gpt-plugin/blob/main/docs/terms-of-use.md",
+        "logo": "assets/dincer-connector-icon.png",
+        "composerIcon": "assets/dincer-connector-icon.png",
+        "brandColor": "#E30613"
+      },
+      "review": {
+        "test_cases": {
+          "positive": [
+            { "description": "Find transportation prices for a supported origin and destination.", "prompt": "Gebze çıkışlı Bursa kamyon fiyatı nedir?", "tools_triggered": "query_data", "expected_behavior": "Call query_data with the transportation source and return matching Bursa price records from the tool result." },
+            { "description": "List depots in a province.", "prompt": "Kocaeli ilindeki Dincer Logistics depolarını göster.", "tools_triggered": "query_data", "expected_behavior": "Call query_data with the depot source and list only depot records returned for Kocaeli." },
+            { "description": "Find a depot by district.", "prompt": "Tarsus ilçesindeki depo bilgilerini bul.", "tools_triggered": "query_data", "expected_behavior": "Call query_data with the depot source and return the matching Tarsus location details." },
+            { "description": "Return several destination prices from one origin.", "prompt": "Gebze çıkışlı Adana kamyon fiyat listesini göster.", "tools_triggered": "query_data", "expected_behavior": "Call query_data with the transportation source and present the returned Adana district and price rows." },
+            { "description": "Search for a depot by city name.", "prompt": "Trabzon'daki depo kaydını bul.", "tools_triggered": "query_data", "expected_behavior": "Call query_data with the depot source and return matching location information or clearly state that no matching record was returned." }
+          ],
+          "negative": [
+            { "description": "The plugin does not create freight bookings.", "prompt": "Yarın için Bursa'ya kamyon rezervasyonu oluştur." },
+            { "description": "The plugin does not modify company source data.", "prompt": "Bursa kamyon fiyatını 1 TL olarak değiştir." },
+            { "description": "The plugin does not track live shipments.", "prompt": "34 ABC 123 plakalı aracın canlı konumunu göster." }
+          ]
+        },
+        "commerce": false
+      },
+      "publication": {
+        "release_notes": "Removed OAuth sign-in so reviewers and users can access the public MCP server directly. Preserved anonymous rate limiting and question audit records."
+      }
+    }
+  }
+}
