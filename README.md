@@ -2,7 +2,7 @@
 
 Dincer Logistics'in ChatGPT ve Codex entegrasyonu.
 
-Uygulama, yetkili kullanıcıların kurumsal bilgilere güvenli biçimde erişmesini
+Uygulama, kullanıcıların kurumsal bilgilere güvenli biçimde erişmesini
 sağlar ve kaynak verileri değiştirmez. Çalışma talimatları, kaynak veriler ve altyapı
 yapılandırması bu public depoda tutulmaz.
 

@@ -6,8 +6,8 @@ This notice supplements the official
 [Dincer Logistics Privacy and Cookie Policy](https://dincerlogistics.com/gizlilik-ve-cerez-politikasi/).
 
 The plugin processes account information, user requests, matching business
-information, and limited technical records as needed to authenticate users,
-provide and secure the service, troubleshoot failures, and meet legal
+information, pseudonymous request identifiers, and limited technical records as
+needed to provide and secure the service, troubleshoot failures, and meet legal
 obligations. Dincer Logistics does not sell personal information or use plugin
 data for advertising.
 
@@ -16,8 +16,8 @@ providers, may process information only as required to deliver the service and
 under their applicable terms. Business source data and operating instructions
 are not stored in the public plugin repository.
 
-Security controls include encrypted transport, authenticated access, and
-restricted access to approved information without modifying source data. Records are retained only
+Security controls include encrypted transport, request throttling, and restricted
+access to approved information without modifying source data. Records are retained only
 as long as required for service operation, security, and legal obligations.
 
 You may disconnect the plugin at any time. For access, correction, deletion, or
