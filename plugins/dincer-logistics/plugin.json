@@ -1,6 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
-  "name": "dincer-logistics",
+  "name": "app-6a6c5669df4081918ea4646033f848a1",
   "version": "1.0.1",
   "description": "Searches Dincer Logistics depot and transportation information.",
   "author": { "name": "Dinçer Logistics" },
