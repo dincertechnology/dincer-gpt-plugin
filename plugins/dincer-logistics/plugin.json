@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
-  "name": "app-6a6c5669df4081918ea4646033f848a1",
-  "version": "1.0.1",
+  "name": "dincer-logistics",
+  "version": "1.0.3",
   "description": "Searches Dincer Logistics depot and transportation information.",
   "author": { "name": "Dinçer Logistics" },
   "extensions": {
@@ -11,7 +11,7 @@
         "shortDescription": "Explore logistics services",
         "longDescription": "Find Dincer Logistics depot locations, service information, and transportation price records from approved company data.",
         "developerName": "Dinçer Logistics",
-        "category": "Productivity",
+        "category": "Business & Operations",
         "defaultPrompt": [
           "Gebze çıkışlı Bursa kamyon fiyatı nedir?",
           "Kocaeli'deki Dincer Logistics depolarını göster.",
@@ -26,6 +26,7 @@
         "brandColor": "#E30613"
       },
       "review": {
+        "demo_recording_url": "https://raw.githubusercontent.com/dincertechnology/dincer-gpt-plugin/fix/gpt-public-mcp-docs-20260930/demo-dincer-logistics-cropped.mp4",
         "test_cases": {
           "positive": [
             { "description": "Find transportation prices for a supported origin and destination.", "prompt": "Gebze çıkışlı Bursa kamyon fiyatı nedir?", "tools_triggered": "query_data", "expected_behavior": "Call query_data with the transportation source and return matching Bursa price records from the tool result." },

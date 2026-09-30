@@ -1,6 +1,6 @@
 {
-  "name": "app-6a6c5669df4081918ea4646033f848a1",
-  "version": "1.0.1",
+  "name": "dincer-logistics",
+  "version": "1.0.3",
   "description": "Searches Dincer Logistics depot and transportation information.",
   "author": { "name": "Dinçer Logistics" },
   "homepage": "https://dincerlogistics.com/",
@@ -13,7 +13,7 @@
     "shortDescription": "Explore logistics services",
     "longDescription": "Find Dincer Logistics depot locations, service information, and transportation price records from approved company data.",
     "developerName": "Dinçer Logistics",
-    "category": "Productivity",
+    "category": "Business & Operations",
     "websiteURL": "https://dincerlogistics.com/",
     "supportURL": "https://dincerlogistics.com/iletisim",
     "privacyPolicyURL": "https://github.com/dincertechnology/dincer-gpt-plugin/blob/main/docs/privacy-policy.md",
